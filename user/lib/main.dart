@@ -1,30 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:user/mainscreen.dart';
+import 'package:flutter_healthcare_app/src/config/route.dart';
+import 'package:flutter_healthcare_app/src/theme/theme.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
-      title: "user",
+      title: 'Health Care',
+      theme: AppTheme.lightTheme,
+      routes: Routes.getRoute(),
+      onGenerateRoute: (settings) => Routes.onGenerateRoute(settings),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: MyMain(),
+      initialRoute: "SplashPage",
     );
   }
 }
