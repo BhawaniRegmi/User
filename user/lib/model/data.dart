@@ -2,7 +2,7 @@ final doctorMapList = [
   // jason vhaneko List of map ho
   {
     // map vhaneko list of key:value
-    "name": "Dr. David Kemp",
+    "name": "Dr. Bhawani Regmi",
     "type": "Heart Sergeon",
     "rating": 4.5,
     "goodReviews": 79.2,
@@ -14,7 +14,7 @@ final doctorMapList = [
         "A doctor can be found in several settings, including public health organization, group practices and  hospitals They have some of the most diverse and challenging careears available and part of a universally well-respected profession",
   },
   {
-    "name": "Dr. katthy Mathews",
+    "name": "Dr. Abhishek Chalise",
     "type": "Neurology",
     "rating": 3.5,
     "goodReviews": 93.2,
@@ -26,7 +26,7 @@ final doctorMapList = [
         "A doctor can be found in several settings, including public health organization, group practices and  hospitals They have some of the most diverse and challenging careears available and part of a universally well-respected profession",
   },
   {
-    "name": "DR. Morris",
+    "name": "DR. Basant Joshi",
     "type": "Cardio Sergeon",
     "rating": 2.5,
     "goodReviews": 88.2,
@@ -38,7 +38,7 @@ final doctorMapList = [
         "A doctor can be found in several settings, including public health organization, group practices and  hospitals They have some of the most diverse and challenging careears available and part of a universally well-respected profession",
   },
   {
-    "name": "Dr. Bruce Banner",
+    "name": "Dr. Dinesh Wasti",
     "type": "Heart Sergeon",
     "rating": 1.5,
     "goodReviews": 12.2,
