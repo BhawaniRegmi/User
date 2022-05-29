@@ -1,5 +1,7 @@
 final doctorMapList = [
+  // jason vhaneko List of map ho
   {
+    // map vhaneko list of key:value
     "name": "Dr. David Kemp",
     "type": "Heart Sergeon",
     "rating": 4.5,

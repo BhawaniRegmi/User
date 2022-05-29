@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_healthcare_app/src/theme/light_color.dart';
+//import 'package:flutter_healthcare_app/src/theme/light_color.dart';
+import 'package:user/theme/light_color.dart';
 
 class RatingStar extends StatefulWidget {
-  RatingStar({Key key, this.rating}) : super(key: key);
+  RatingStar({Key? key, this.rating = 7.0}) : super(key: key);
   final double rating;
 
   @override
@@ -27,7 +28,7 @@ class _RatingStarState extends State<RatingStar> {
     return Container(
       child: TweenAnimationBuilder<double>(
         tween: Tween<double>(begin: 0, end: 5),
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         builder: (context, value, child) {
           return Wrap(
               children:

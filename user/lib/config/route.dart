@@ -8,13 +8,15 @@ import 'package:user/widget/costume_route.dart';
 class Routes {
   static Map<String, WidgetBuilder> getRoute() {
     return <String, WidgetBuilder>{
-      '/': (_) => SplashPage(),
+      //Map where string is the key
+      '/': (_) => SplashPage(), //and widgetbuilder is value
       '/HomePage': (_) => HomePage(),
     };
   }
 
-  static Route onGenerateRoute(RouteSettings settings) {
-    final List<String> pathElements = settings.name.split('/');
+  static onGenerateRoute(RouteSettings settings) {
+    // final List<String> pathElements = settings.name.split('/');
+    final List<String> pathElements = settings.name!.split('/');
     if (pathElements[0] != '' || pathElements.length == 1) {
       return null;
     }
@@ -22,7 +24,7 @@ class Routes {
       case "DetailPage":
         return CustomRoute<bool>(
             builder: (BuildContext context) => DetailPage(
-                  model: settings.arguments,
+                //    model: settings.arguments,
                 ));
     }
   }

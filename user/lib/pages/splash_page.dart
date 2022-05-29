@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_healthcare_app/src/pages/home_page.dart';
-import 'package:flutter_healthcare_app/src/theme/light_color.dart';
-import 'package:flutter_healthcare_app/src/theme/text_styles.dart';
-import 'package:flutter_healthcare_app/src/theme/extention.dart';
+
 import 'package:user/pages/home_page.dart';
+import 'package:user/theme/light_color.dart';
+import 'package:user/theme/text_style.dart';
 
 class SplashPage extends StatefulWidget {
-  SplashPage({Key key}) : super(key: key);
+  SplashPage({Key? key}) : super(key: key);
 
   @override
   _SplashPageState createState() => _SplashPageState();
@@ -42,6 +41,7 @@ class _SplashPageState extends State<SplashPage> {
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
+                      //LightColor
                       colors: [LightColor.purpleExtraLight, LightColor.purple],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -65,19 +65,20 @@ class _SplashPageState extends State<SplashPage> {
                 height: 100,
               ),
               Text(
-                "Time Health",
-                style: TextStyles.h1Style.white,
+                "Time Health", //TextStyles
+                // style: TextStyles.h1Style.white,
               ),
               Text(
                 "By healthcare Evolution",
-                style: TextStyles.bodySm.white.bold,
+                // style: TextStyles.bodySm.white.bold,
               ),
               Expanded(
                 flex: 7,
                 child: SizedBox(),
               ),
             ],
-          ).alignTopCenter,
+            //alignTopCenter
+          ),
         ],
       ),
     );

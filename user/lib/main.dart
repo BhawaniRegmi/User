@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_healthcare_app/src/config/route.dart';
-import 'package:flutter_healthcare_app/src/theme/theme.dart';
+import 'package:user/config/route.dart';
+import 'package:user/pages/detail_page.dart';
+import 'package:user/pages/home_page.dart';
+import 'package:user/theme/theme.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,10 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Health Care',
       theme: AppTheme.lightTheme,
-      routes: Routes.getRoute(),
-      onGenerateRoute: (settings) => Routes.onGenerateRoute(settings),
+      home: HomePage(),
+      /* routes: Routes.getRoute(),
+      onGenerateRoute: (settings) =>
+          Routes.onGenerateRoute(settings), //lemda functiom hernu parne xa */
+
       debugShowCheckedModeBanner: false,
-      initialRoute: "SplashPage",
+      // initialRoute: "SplashPage",
     );
   }
 }

@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_healthcare_app/src/theme/light_color.dart';
+/*import 'package:flutter_healthcare_app/src/theme/light_color.dart';
 import 'package:flutter_healthcare_app/src/model/dactor_model.dart';
 import 'package:flutter_healthcare_app/src/theme/text_styles.dart';
 import 'package:flutter_healthcare_app/src/theme/theme.dart';
 import 'package:flutter_healthcare_app/src/theme/extention.dart';
 import 'package:flutter_healthcare_app/src/widgets/progress_widget.dart';
-import 'package:flutter_healthcare_app/src/widgets/rating_start.dart';
+import 'package:flutter_healthcare_app/src/widgets/rating_start.dart';  */
 import 'package:user/model/doctor_model.dart';
 import 'package:user/theme/light_color.dart';
 import 'package:user/theme/text_style.dart';
+import 'package:user/theme/theme.dart';
 import 'package:user/widget/progress_widget.dart';
 import 'package:user/widget/rating_star.dart';
 
 class DetailPage extends StatefulWidget {
-  DetailPage({Key key, this.model}) : super(key: key);
-  final DoctorModel model;
+  DetailPage({Key? key, this.model}) : super(key: key);
+  // final DoctorModel model;
+  var model;
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -50,9 +52,10 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle titleStyle = TextStyles.title.copyWith(fontSize: 25).bold;
+    TextStyle titleStyle =
+        TextStyles.title.copyWith(fontSize: 25); //.bold; //AppTheme
     if (AppTheme.fullWidth(context) < 393) {
-      titleStyle = TextStyles.title.copyWith(fontSize: 23).bold;
+      titleStyle = TextStyles.title.copyWith(fontSize: 23); //.bold;
     }
     return Scaffold(
       backgroundColor: LightColor.extraLightBlue,
@@ -107,8 +110,8 @@ class _DetailPageState extends State<DetailPage> {
                             ],
                           ),
                           subtitle: Text(
-                            model.type,
-                            style: TextStyles.bodySm.subTitleColor.bold,
+                            model.type, //subTitleColor
+                            // style: TextStyles.bodySm.subTitleColor.bold,
                           ),
                         ),
                         Divider(
@@ -148,10 +151,11 @@ class _DetailPageState extends State<DetailPage> {
                           thickness: .3,
                           color: LightColor.grey,
                         ),
-                        Text("About", style: titleStyle).vP16,
+                        // Text("About", style: titleStyle).vP16,
+                        Text("About", style: titleStyle),
                         Text(
                           model.description,
-                          style: TextStyles.body.subTitleColor,
+                          //   style: TextStyles.body.subTitleColor,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,10 +170,11 @@ class _DetailPageState extends State<DetailPage> {
                                 Icons.call,
                                 color: Colors.white,
                               ),
-                            ).ripple(
+                            ),
+                            /*  .ripple(
                               () {},
                               borderRadius: BorderRadius.circular(10),
-                            ),
+                            ),  */
                             SizedBox(
                               width: 10,
                             ),
@@ -183,25 +188,26 @@ class _DetailPageState extends State<DetailPage> {
                                 Icons.chat_bubble,
                                 color: Colors.white,
                               ),
-                            ).ripple(
+                            ),
+                            /*.ripple(
                               () {},
                               borderRadius: BorderRadius.circular(10),
-                            ),
+                            ),   */
                             SizedBox(
                               width: 10,
                             ),
                             FlatButton(
-                              color: Theme.of(context).primaryColor,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                              onPressed: () {},
-                              child: Text(
-                                "Make an appointment",
-                                style: TextStyles.titleNormal.white,
-                              ).p(10),
-                            ),
+                                color: Theme.of(context).primaryColor,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                onPressed: () {},
+                                child: Text(
+                                  "Make an appointment",
+                                  //   style: TextStyles.titleNormal.white,
+                                ) //.p(10),
+                                ),
                           ],
-                        ).vP16
+                        ) // .vP16
                       ],
                     ),
                   ),
