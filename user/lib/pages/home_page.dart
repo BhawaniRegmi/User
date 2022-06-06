@@ -7,6 +7,8 @@ import 'package:user/jpt2.dart';
 import 'package:user/model/data.dart';
 import 'package:user/model/doctor_model.dart';
 import 'package:user/pages/detail_page.dart';
+import 'package:user/pages/diseasesPage.dart';
+import 'package:user/pages/profilePage.dart';
 import 'package:user/pages/splash_page.dart';
 import 'package:user/theme/light_color.dart';
 import 'package:user/theme/text_style.dart';
@@ -59,12 +61,61 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  /* child: Text(
+            "We are always here for you ",
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),  */
+
   Widget _header() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("you are welcome,"),
+        SizedBox(
+          height: 24,
+        ),
+        Center(
+          child: Text(
+            "You are welcome ",
+            style: TextStyle(
+              color: Colors.purple,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
         Text("Smart Health Care", style: TextStyles.h1Style),
+        SizedBox(
+          height: 10,
+        ),
+        Center(
+          child: Text(
+            "Provide An Exceptional ",
+            style: TextStyle(
+              color: Colors.green,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 7,
+        ),
+        Center(
+          child: Text(
+            "Patient Experience ",
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
       ],
     ); //.p16;
   }
@@ -110,7 +161,7 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text("Category"),
+              Center(child: Text("Our Special services")),
               Text(
                 "See All",
                 style: TextStyles.titleNormal
@@ -122,13 +173,172 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           /*  height: AppTheme.fullHeight(context) * .28,
           width: AppTheme.fullWidth(context),  */
-          height: 350,
-          width: 9000,
+          height: 400,
+          width: 10000,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
+              Container(
+                  height: 400,
+                  width: 400,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/COVID-19-symptoms.png"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyDisease(
+                                  imago: AssetImage("assets/covid remedies"),
+                                )),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/liv.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/livo"))),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 1000,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/stroke.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MyDisease(
+                                  imago: AssetImage("assets/strokeo"))));
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/tuber.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/tubero"))),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/cold.png"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/cold"))),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/di.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/direho"))),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/hearto.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/heartoo"))),
+                      );
+                    },
+                  )),
+
+              Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/st.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MyDisease(imago: AssetImage("assets/strokeo"))),
+                      );
+                    },
+                  )),
               // _categoryCard("Chemist & Drugist", "350 + Stores",
-              _categoryCard("Common cold", "350 + Stores",
+              _categoryCard("Heart disease", "350 + Stores",
                   color: LightColor.green, lightColor: LightColor.lightGreen),
               _categoryCard("Covid - 19 Specialist", "899 Doctors",
                   color: LightColor.skyBlue, lightColor: LightColor.lightBlue),
@@ -141,6 +351,79 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+
+        // style: TextStyles.h1Style
+        Container(
+          child: Text(
+            "We are always here for you ",
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+
+        Container(
+          child: Text(
+            "Our services ",
+            style: TextStyle(
+              color: Colors.blue,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+
+        Container(
+          child: Row(
+            children: [
+              SizedBox(
+                height: 50,
+                width: 15,
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.home,
+                  color: Colors.blue,
+                  size: 40.0,
+                  textDirection: TextDirection.ltr,
+                  semanticLabel:
+                      'Icon', // Announced in accessibility modes (e.g TalkBack/VoiceOver). This label does not show in the UI.
+                ),
+              ),
+              SizedBox(
+                height: 50,
+                width: 40,
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.local_hospital,
+                  color: Colors.blue,
+                  size: 40.0,
+                  textDirection: TextDirection.ltr,
+                  semanticLabel:
+                      'Icon', // Announced in accessibility modes (e.g TalkBack/VoiceOver). This label does not show in the UI.
+                ),
+              ),
+              SizedBox(
+                height: 50,
+                width: 40,
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.medical_information,
+                  color: Colors.blue,
+                  size: 40.0,
+                  textDirection: TextDirection.ltr,
+                  semanticLabel:
+                      'Icon', // Announced in accessibility modes (e.g TalkBack/VoiceOver). This label does not show in the UI.
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
