@@ -2,7 +2,8 @@ final doctorMapList = [
   // jason vhaneko List of map ho
   {
     // map vhaneko list of key:value
-    "name": "Dr. Bhawani Regmi",
+    "name":
+        "Dr. Bhawani Regmi                               Make an appointment  ",
     "type": "Heart Sergeon",
     "rating": 4.5,
     "goodReviews": 79.2,

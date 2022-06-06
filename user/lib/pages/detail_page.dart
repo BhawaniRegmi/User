@@ -14,9 +14,9 @@ import 'package:user/widget/progress_widget.dart';
 import 'package:user/widget/rating_star.dart';
 
 class DetailPage extends StatefulWidget {
+  var model;
   DetailPage({Key? key, this.model}) : super(key: key);
   // final DoctorModel model;
-  var model;
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -25,6 +25,7 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   // DoctorModel
   var model;
+
   @override
   void initState() {
     model = widget.model;

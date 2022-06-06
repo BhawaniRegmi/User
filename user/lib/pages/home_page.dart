@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("Welcome,"),
+        Text("you are welcome,"),
         Text("Smart Health Care", style: TextStyles.h1Style),
       ],
     ); //.p16;
@@ -193,6 +193,7 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
+                      //Flexible
                       Flexible(
                         child: Text(title, style: titleStyle),
                       ),
@@ -226,13 +227,13 @@ class _HomePageState extends State<HomePage> {
               ),
               IconButton(
                   icon: Icon(
-                    Icons.sort,
+                    Icons.favorite_outline_outlined,
                     color: Theme.of(context).primaryColor,
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SplashPage()),
+                      MaterialPageRoute(builder: (context) => DetailPage()),
                     );
                   })
               // .p(12).ripple(() {}, borderRadius: BorderRadius.all(Radius.circular(20))),
