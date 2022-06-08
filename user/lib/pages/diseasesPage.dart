@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyDisease extends StatelessWidget {
-  MyDisease({Key? key, this.imago}) : super(key: key);
   var imago;
+  MyDisease({Key? key, this.imago}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:user/authentication/login.dart';
+import 'package:user/dataBase/add.dart';
 import 'package:user/imageo.dart';
 import 'package:user/jpt2.dart';
 
@@ -193,7 +195,8 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => MyDisease(
-                                  imago: AssetImage("assets/covid remedies"),
+                                  imago:
+                                      AssetImage("assets/covid remedies.jpg"),
                                 )),
                       );
                     },
@@ -213,8 +216,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/livo"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/livo.png"))),
                       );
                     },
                   )),
@@ -234,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => MyDisease(
-                                  imago: AssetImage("assets/strokeo"))));
+                                  imago: AssetImage("assets/strokeo.png"))));
                     },
                   )),
 
@@ -252,8 +255,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/tubero"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/tubero.jpg"))),
                       );
                     },
                   )),
@@ -272,8 +275,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/cold"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/cold.png"))),
                       );
                     },
                   )),
@@ -292,8 +295,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/direho"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/direho.png"))),
                       );
                     },
                   )),
@@ -312,8 +315,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/heartoo"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/heartoo.png"))),
                       );
                     },
                   )),
@@ -332,8 +335,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                MyDisease(imago: AssetImage("assets/strokeo"))),
+                            builder: (context) => MyDisease(
+                                imago: AssetImage("assets/strokeo.png"))),
                       );
                     },
                   )),
@@ -353,6 +356,10 @@ class _HomePageState extends State<HomePage> {
         ),
 
         // style: TextStyles.h1Style
+
+        SizedBox(
+          height: 15,
+        ),
         Container(
           child: Text(
             "We are always here for you ",
@@ -361,6 +368,9 @@ class _HomePageState extends State<HomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
 
         Container(
@@ -371,6 +381,9 @@ class _HomePageState extends State<HomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
 
         Container(
@@ -423,6 +436,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+        ),
+        Container(
+          child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
+              },
+              child: Text("Main Page")),
         )
       ],
     );
@@ -540,7 +563,7 @@ class _HomePageState extends State<HomePage> {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ProfilePage()),
+          MaterialPageRoute(builder: (context) => AddStudentPage()),
         );
       },
       child: Container(
